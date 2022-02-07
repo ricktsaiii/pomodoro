@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["dailyreport"],{cc44:function(e,n,t){"use strict";t.r(n);var l=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("h1",[e._v("DailyReport")])},r=[],c=t("2877"),a={},o=Object(c["a"])(a,l,r,!1,null,null,null);n["default"]=o.exports}}]);
+//# sourceMappingURL=dailyreport.94566e8f.js.map

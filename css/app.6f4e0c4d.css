@@ -1,0 +1,1 @@
+.header{height:150px;margin-left:20%}.container,.header{width:100wh;display:flex;align-items:center}.container{justify-content:space-around}.body{margin:2rem;height:500px;align-items:center;display:flex}.row{width:100%}#clock{left:25%;top:35%}#choose,#clock{position:absolute}#choose{width:200px;left:62%;top:40%}
