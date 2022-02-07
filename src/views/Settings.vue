@@ -1,15 +1,27 @@
-<template lang="pug">
+<!-- <template lang="pug">
 #settings
   b-container
     b-row
       b-col(cols="12")
-        h1.text-center 設定
-      b-col(cols="12")
-        b-table(:items="items" :fields="fields" @row-clicked='select')
+        b-table(:items="items" :fields="fields")
           template(#cell(src)="data")
             audio(controls :src="require('@/assets/' + data.value)")
-          template(#cell(select)="data")
-            span(v-if="data.item.src === sound") V
+</template> -->
+<template>
+<div id="settings">
+    <b-row>
+      <b-col cols="12">
+        <b-table :items="items" :fields="fields" @row-clicked='select'>
+          <template #cell(src)="data">
+            <audio controls="controls" :src="require('@/assets/' + data.value)"></audio>
+          </template>
+            <template #cell(select)="data">
+              <span v-if="data.item.src === sound">V</span>
+            </template>
+        </b-table>
+      </b-col>
+    </b-row>
+</div>
 </template>
 
 <script>
@@ -40,3 +52,17 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+#settings {
+  width: 600px;
+  position: absolute;
+  left: 50%;
+  top: 35%;
+}
+
+#settings table {
+cursor: pointer;
+}
+
+</style>

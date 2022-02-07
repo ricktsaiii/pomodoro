@@ -10,7 +10,8 @@ const routes = [
     name: 'Home',
     component: Home,
     meta: {
-      title: '番茄鐘'
+      title: '番茄鐘',
+      keepAlive: true
     }
   },
   {
@@ -26,7 +27,15 @@ const routes = [
     name: 'List',
     component: () => import(/* webpackChunkName: "list" */ '../views/List.vue'),
     meta: {
-      title: '番茄鐘 | 事項'
+      title: ''
+    }
+  },
+  {
+    path: '/dailyreport',
+    name: 'DailyReport',
+    component: () => import(/* webpackChunkName: "dailyreport" */ '../views/DailyReport.vue'),
+    meta: {
+      title: ''
     }
   },
   {

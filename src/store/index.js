@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import createPersistedState from 'vuex-persistedstate'
 
 Vue.use(Vuex)
 
@@ -12,8 +13,7 @@ export default new Vuex.Store({
     items: [],
     current: '',
     finished: [],
-    timeleft: time,
-    break: false
+    timeleft: time
   },
   mutations: {
     selectSound (state, data) {
@@ -55,10 +55,14 @@ export default new Vuex.Store({
         state.break = !state.break
       }
       state.timeleft = state.break ? timebreak : time
+    },
+    delfinish (state, data) {
+      state.finished.splice(data, 1)
     }
   },
-  actions: {
-  },
-  modules: {
-  }
+  actions: {},
+  modules: {},
+  plugins: [
+    createPersistedState({ key: 'pomodoro' })
+  ]
 })
